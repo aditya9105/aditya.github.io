@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Page with Form, Table, Images, and Video Clips</title>
+    <title>Library</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         table {
             width: 100%;
@@ -15,87 +28,121 @@
             margin-top: 20px;
         }
         th, td {
-            padding: 10px;
-            text-align: center;
             border: 1px solid #ddd;
+            padding: 10px;
         }
         th {
-            background-color: #f4f4f4;
+            background: #007bff;
+            color: white;
+        }
+        ul {
+            text-align: left;
+            margin-left: 20px;
         }
         img {
-            width: 200px;
+            width: 150px;
             height: auto;
+            margin: 10px;
         }
-        .video-container {
+        video {
+            width: 100%;
             margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+            text-align: left;
+            background: #eee;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to My HTML Page</h1>
+    <div class="container">
+        <h1>Welcome to the Library</h1>
 
-    <!-- Form Section -->
-    <h2>Contact Form</h2>
-    <form action="#" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-        
-        <input type="submit" value="Submit">
-    </form>
+        <h2>Featured Books</h2>
+        <ul>
+            <li>The Great Gatsby</li>
+            <li>To Kill a Mockingbird</li>
+            <li>1984</li>
+            <li>Pride and Prejudice</li>
+            <li>Harry Potter and the Sorcerer's Stone</li>
+        </ul>
 
-    <!-- Table Section -->
-    <h2>Sample Table</h2>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>John Doe</td>
-            <td>30</td>
-            <td>USA</td>
-        </tr>
-        <tr>
-            <td>Jane Smith</td>
-            <td>25</td>
-            <td>Canada</td>
-        </tr>
-        <tr>
-            <td>Emily Davis</td>
-            <td>35</td>
-            <td>UK</td>
-        </tr>
-    </table>
+        <h2>Book Collection</h2>
+        <table>
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Genre</th>
+            </tr>
+            <tr>
+                <td>The Hobbit</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Fantasy</td>
+            </tr>
+            <tr>
+                <td>War and Peace</td>
+                <td>Leo Tolstoy</td>
+                <td>Historical</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>Dystopian</td>
+            </tr>
+        </table>
 
-    <!-- Images Section -->
-    <h2>Gallery</h2>
-    <div>
-        <img src="https://via.placeholder.com/200" alt="Image 1">
-        <img src="https://via.placeholder.com/200" alt="Image 2">
-        <img src="https://via.placeholder.com/200" alt="Image 3">
-    </div>
+        <h2>Popular Book of the Month</h2>
+        <img src="hobbit.jpg"Book of the Month">
 
-    <!-- Video Clips Section -->
-    <div class="video-container">
-        <h2>Video Clips</h2>
-        <video width="320" height="240" controls>
-            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <h2>Library Introduction Video</h2>
+        <video controls>
+            <source src="library.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <br><br>
-        <video width="320" height="240" controls>
-            <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
+
+        <h2>Search & Recommend Books</h2>
+        <form>
+            <label for="search">Search for a Book:</label>
+            <input type="text" id="search" name="search" placeholder="Enter book name...">
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name...">
+
+            <label for="book">Recommend a Book:</label>
+            <input type="text" id="book" name="book" placeholder="Enter book title...">
+
+            <label for="reason">Why do you recommend this book?</label>
+            <textarea id="reason" name="reason" rows="3" placeholder="Write your reason..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
 </body>
 </html>
+
